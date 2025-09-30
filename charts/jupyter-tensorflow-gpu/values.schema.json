@@ -1091,13 +1091,16 @@
       "description": "Security context",
       "properties": {
         "readOnlyRootFilesystem": {
-          "type": "boolean"
+          "type": "boolean",
+          "default": false
         },
         "runAsNonRoot": {
-          "type": "boolean"
+          "type": "boolean",
+          "default": false
         },
         "runAsUser": {
-          "type": "integer"
+          "type": "integer",
+          "default": 1000
         }
       },
       "x-onyxia": {
