@@ -1099,11 +1099,13 @@
         }
     },
     "spec": {
-          "type": "object",
-          "descirption": "Deployment spec",
-           "x-onyxia": {
-               "hidden": true
-           }
+        "type": "object",
+        "default": {},
+        "descirption": "Deployment spec",
+        "additionalProperties": true,
+        "x-onyxia": {
+            "hidden": true
+        }
     },
     "message": {
       "type": "object",
