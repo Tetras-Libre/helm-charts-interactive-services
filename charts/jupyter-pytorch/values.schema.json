@@ -1077,6 +1077,31 @@
         }
       }
     },
+    "securityContext": {
+      "type": "object",
+      "description": "Security context",
+      "properties": {
+        "readOnlyRootFilesystem": {
+          "type": "boolean"
+        },
+        "runAsNonRoot": {
+          "type": "boolean"
+        },
+        "runAsUser": {
+          "type": "integer"
+        }
+      },
+      "x-onyxia": {
+        "hidden": true
+      }
+    },
+    "spec": {
+      "type": "object",
+      "descirption": "Deployment spec",
+      "x-onyxia": {
+        "hidden": true
+      }
+    },
     "message": {
       "type": "object",
       "description": "Warning message",
