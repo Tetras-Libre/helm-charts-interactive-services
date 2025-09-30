@@ -1100,7 +1100,9 @@
     },
     "spec": {
       "type": "object",
+      "default": {},
       "descirption": "Deployment spec",
+      "additionalProperties": true,
       "x-onyxia": {
         "hidden": true
       }
