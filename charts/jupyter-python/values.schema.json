@@ -85,9 +85,13 @@
         "items": {
             "type": "object",
             "properties" : {
-                "type": {
+                "name": {
                     "type": "string",
                     "default": ""
+                },
+                "type": {
+                    "type": "string",
+                    "default": "nfs"
                 },
                 "server": {
                     "type": "string",
@@ -99,7 +103,7 @@
                 },
                 "readonly": {
                     "type": "boolean",
-                    "default": true
+                    "default": false
                 }
             }
         }
