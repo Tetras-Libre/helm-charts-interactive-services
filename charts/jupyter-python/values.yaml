@@ -135,7 +135,9 @@ podAnnotations: {}
 podSecurityContext:
   fsGroup: 100
 
-spec: {}
+volumes: []
+
+additionalVolumeMounts: []
 
 securityContext: {}
   # capabilities:
