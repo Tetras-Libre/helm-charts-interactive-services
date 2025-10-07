@@ -99,6 +99,10 @@
           "path": {
             "type": "string",
             "default": ""
+          },
+          "readonly": {
+            "type": "boolean",
+            "default": false
           }
         }
       }
