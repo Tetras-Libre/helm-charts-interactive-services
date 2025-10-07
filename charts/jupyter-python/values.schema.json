@@ -102,6 +102,7 @@
                     "default": true
                 }
             }
+        }
     },
     "resources": {
       "title": "Resources (CPU/RAM)",
