@@ -61,6 +61,12 @@
         }
       }
     },
+    "additionalVolumeMounts": {
+      "type": "array"
+    },
+    "volumes": {
+      "type": "array"
+    },
     "resources": {
       "title": "Resources (CPU/RAM)",
       "type": "object",
@@ -1103,15 +1109,6 @@
           "default": 1000
         }
       },
-      "x-onyxia": {
-        "hidden": true
-      }
-    },
-    "spec": {
-      "type": "object",
-      "default": {},
-      "descirption": "Deployment spec",
-      "additionalProperties": true,
       "x-onyxia": {
         "hidden": true
       }

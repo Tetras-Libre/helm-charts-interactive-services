@@ -93,7 +93,8 @@ kubernetes:
 podAnnotations: {}
 podSecurityContext:
   fsGroup: 100
-spec: {}
+volumes: []
+additionalVolumeMounts: []
 securityContext: {}
 networking:
   type: ClusterIP

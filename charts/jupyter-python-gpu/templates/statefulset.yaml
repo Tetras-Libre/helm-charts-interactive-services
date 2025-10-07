@@ -313,10 +313,23 @@ spec:
               mountPath: {{ .Values.certificates.pathToCaBundle }}
               subPath: cacerts
             {{- end }}
+            {{- if .Values.additionalVolumeMounts }}
+              { {- tpl (toYaml .Values.additionalVolumeMounts) . | nindent 12 }}
+            {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+      {{- range .Values.volumes }}
+        - name: {{ tpl (.name) $ | replace "." "-" }}
+          {{- if eq .type "nfs" }}
+          nfs:
+            server: {{ tpl (.server) $ }}
+            path: {{ tpl (.path) $ }}
+            readonly: {{ tpl (.readonly) $ }}
+          {{- end }}
+        {{- end }}
+
       {{- with .Values.affinity }}
       affinity:
         {{- toYaml . | nindent 8 }}
