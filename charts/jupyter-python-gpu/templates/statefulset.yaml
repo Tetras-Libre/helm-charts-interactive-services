@@ -326,7 +326,6 @@ spec:
           nfs:
             server: {{ tpl (.server) $ }}
             path: {{ tpl (.path) $ }}
-            readOnly: {{ tpl (.readonly) $ | toYaml }}
           {{- end }}
         {{- end }}
 
