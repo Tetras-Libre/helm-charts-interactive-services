@@ -326,7 +326,7 @@ spec:
           nfs:
             server: {{ tpl (.server) $ }}
             path: {{ tpl (.path) $ }}
-            readOnly: {{ .readonly }}
+            readOnly: {{ .readonly | ternary "true" "false" }}
           {{- end }}
         {{- end }}
 
