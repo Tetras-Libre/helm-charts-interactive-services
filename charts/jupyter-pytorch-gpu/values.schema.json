@@ -101,7 +101,8 @@
             "type": "string",
             "default": ""
           }
-        }
+        },
+        "additionalProperties": true
       }
     },
     "resources": {
