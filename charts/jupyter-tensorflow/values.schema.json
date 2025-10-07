@@ -101,8 +101,8 @@
             "default": ""
           },
           "readonly": {
-            "type": "string",
-            "default": "false"
+            "type": "boolean",
+            "default": false
           }
         }
       }
