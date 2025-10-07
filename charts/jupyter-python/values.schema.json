@@ -63,10 +63,45 @@
       }
     },
     "additionalVolumeMounts": {
-        "type": "array"
+        "type": "array",
+        "default": [],
+        "items": {
+            "type": "object",
+            "properties" : {
+                "name": {
+                    "type": "string",
+                    "default": ""
+                },
+                "mountPath": {
+                    "type": "string",
+                    "default": ""
+                }
+            }
+        }
     },
     "volumes": {
-        "type": "array"
+        "type": "array",
+        "default": [],
+        "items": {
+            "type": "object",
+            "properties" : {
+                "type": {
+                    "type": "string",
+                    "default": ""
+                },
+                "server": {
+                    "type": "string",
+                    "default": ""
+                },
+                "path": {
+                    "type": "string",
+                    "default": ""
+                },
+                "readonly": {
+                    "type": "boolean",
+                    "default": true
+                }
+            }
     },
     "resources": {
       "title": "Resources (CPU/RAM)",
