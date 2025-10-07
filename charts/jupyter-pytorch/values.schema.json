@@ -63,6 +63,8 @@
       }
     },
     "additionalVolumeMounts": {
+      "title": "Additional mounts",
+      "description": "Mount volumes defined in volume section",
       "type": "array",
       "default": [],
       "items": {
@@ -81,6 +83,8 @@
     },
     "volumes": {
       "type": "array",
+      "title": "Manual volume definitions",
+      "description": "Define volumes such as nfs drives",
       "default": [],
       "items": {
         "type": "object",
@@ -713,13 +717,11 @@
       "title": "Node selector",
       "type": "object",
       "default": {},
-      "additionalProperties": {
-        "type": "string"
-      },
-      "x-onyxia": {
-        "hidden": false,
-        "overwriteDefaultWith": "region.nodeSelector",
-        "overwriteSchemaWith": "nodeSelector.json"
+      "properties": {
+        "kubernetes.io/hostname": {
+          "type": "string",
+          "default": ""
+        }
       }
     },
     "openshiftSCC": {
