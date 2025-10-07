@@ -713,16 +713,11 @@
         }
       }
     },
-    "nodeSelector": {
-      "title": "Node selector",
-      "type": "object",
-      "default": {},
-      "properties": {
-          "kubernetes.io/hostname": {
-              "type": "string",
-              "default": ""
-          }
-       }
+    "nodeHost": {
+      "title": "Node hostname",
+      "description": "Set the hostname on which you want to run",
+      "type": "string",
+      "default": ""
     },
     "openshiftSCC": {
       "description": "configuration for openshift compatibility",
