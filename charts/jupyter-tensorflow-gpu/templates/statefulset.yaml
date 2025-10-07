@@ -325,9 +325,9 @@ spec:
             {{- if .Values.additionalVolumeMounts }}
               {{- tpl (toYaml .Values.additionalVolumeMounts) . | nindent 12 }}
             {{- end }}
-      {{- with .Values.nodeSelector }}
+      {{- if .Values.nodehost }}
       nodeSelector:
-        {{- toYaml . | nindent 8 }}
+        kubernetes.io/hostname: {{ .Values.nodehost }}
       {{- end }}
 
       {{- with .Values.affinity }}

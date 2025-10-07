@@ -727,14 +727,11 @@
         }
       }
     },
-    "nodeSelector": {
-      "type": "object",
-      "description": "NodeSelector",
-      "default": {},
-      "x-onyxia": {
-        "overwriteDefaultWith": "region.nodeSelector",
-        "overwriteSchemaWith": "nodeSelector-gpu.json"
-      }
+    "nodeHost": {
+      "title": "Node hostname",
+      "description": "Set the hostname on which you want to run",
+      "type": "string",
+      "default": ""
     },
     "openshiftSCC": {
       "description": "configuration for openshift compatibility",
@@ -1176,6 +1173,15 @@
           "description": "message to add in notes",
           "default": ""
         }
+      }
+    },
+    "nodeSelector": {
+      "type": "object",
+      "description": "NodeSelector",
+      "default": {},
+      "x-onyxia": {
+        "overwriteDefaultWith": "region.nodeSelector",
+        "overwriteSchemaWith": "nodeSelector-gpu.json"
       }
     }
   }
