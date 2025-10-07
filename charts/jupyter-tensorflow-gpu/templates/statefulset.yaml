@@ -320,7 +320,7 @@ spec:
       nodeSelector:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      {{ if gt (len .Values.volumes.items) 0 }}
+      {{ if gt (len .Values.volumes) 0 }}
       volumes:
         {{- range .Values.volumes }}
         - name: {{ tpl (.name) $ | replace "." "-" }}
