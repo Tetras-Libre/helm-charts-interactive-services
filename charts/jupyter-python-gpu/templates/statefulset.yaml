@@ -100,6 +100,15 @@ spec:
           secret:
             secretName: {{ include "library-chart.secretNameAssistantJupyter" . }}
         {{- end }}
+        {{- range .Values.volumes }}
+        - name: {{ tpl (.name) $ | replace "." "-" }}
+          {{- if eq .type "nfs" }}
+          nfs:
+            server: {{ tpl (.server) $ }}
+            path: {{ tpl (.path) $ }}
+            readonly: {{ .readonly }}
+          {{- end }}
+        {{- end }}
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
@@ -314,23 +323,11 @@ spec:
               subPath: cacerts
             {{- end }}
             {{- if .Values.additionalVolumeMounts }}
-              { {- tpl (toYaml .Values.additionalVolumeMounts) . | nindent 12 }}
+              {{- tpl (toYaml .Values.additionalVolumeMounts) . | nindent 12 }}
             {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
-      {{- end }}
-      {{ if gt (len .Values.volumes) 0 }}
-      volumes:
-        {{- range .Values.volumes }}
-        - name: {{ tpl (.name) $ | replace "." "-" }}
-          {{- if eq .type "nfs" }}
-          nfs:
-            server: {{ tpl (.server) $ }}
-            path: {{ tpl (.path) $ }}
-            readonly: {{ .path }}
-          {{- end }}
-        {{- end }}
       {{- end }}
 
       {{- with .Values.affinity }}
