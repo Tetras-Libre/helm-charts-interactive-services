@@ -320,7 +320,9 @@ spec:
       nodeSelector:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      {{- range .Values.volumes }}
+      {{ if gt (len .Values.volumes.items) 0 }}
+      volumes:
+        {{- range .Values.volumes }}
         - name: {{ tpl (.name) $ | replace "." "-" }}
           {{- if eq .type "nfs" }}
           nfs:
@@ -329,6 +331,7 @@ spec:
             readonly: {{ .path }}
           {{- end }}
         {{- end }}
+      {{- end }}
 
       {{- with .Values.affinity }}
       affinity:
