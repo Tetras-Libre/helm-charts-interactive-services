@@ -100,9 +100,12 @@
           "path": {
             "type": "string",
             "default": ""
+          },
+          "readonly": {
+            "type": "string",
+            "default": "false"
           }
-        },
-        "additionalProperties": true
+        }
       }
     },
     "resources": {
