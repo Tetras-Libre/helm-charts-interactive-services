@@ -98,6 +98,15 @@ spec:
           secret:
             secretName: {{ include "library-chart.secretNameAssistant" . }}
         {{- end }}
+        {{- range .Values.volumes }}
+        - name: {{ tpl (.name) $ | replace "." "-" }}
+          {{- if eq .type "nfs" }}
+          nfs:
+            server: {{ tpl (.server) $ }}
+            path: {{ tpl (.path) $ }}
+            readonly: {{ .readonly }}
+          {{- end }}
+        {{- end }}
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
@@ -153,6 +162,9 @@ spec:
             {{- if .Values.discovery.metaflow }}
             - name : secret-metaflow
               mountPath: /src/metaflow
+            {{- end }}
+            {{- if .Values.additionalVolumeMounts }}
+              {{- tpl (toYaml .Values.additionalVolumeMounts) . | nindent 12 }}
             {{- end }}
           resources:
             limits:
@@ -289,9 +301,10 @@ spec:
               mountPath: {{ .Values.certificates.pathToCaBundle }}
               subPath: cacerts
             {{- end }}
-      {{- with .Values.nodeSelector }}
+      {{- if .Values.nodehost }}
       nodeSelector:
-        {{- toYaml . | nindent 8 }}
+        kubernetes.io/hostname: {{ .Values.nodehost }}
+      {{- end }}
       {{- end }}
       {{- with .Values.affinity }}
       affinity:
