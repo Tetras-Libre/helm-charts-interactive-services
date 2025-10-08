@@ -62,6 +62,56 @@
         }
       }
     },
+    "additionalVolumeMounts": {
+        "title": "Additional mounts",
+        "description": "Mount volumes defined in volume section",
+        "type": "array",
+        "default": [],
+        "items": {
+            "type": "object",
+            "properties" : {
+                "name": {
+                    "type": "string",
+                    "default": ""
+                },
+                "mountPath": {
+                    "type": "string",
+                    "default": ""
+                }
+            }
+        }
+    },
+    "volumes": {
+        "type": "array",
+        "title": "Manual volume definitions",
+        "description": "Define volumes such as nfs drives",
+        "default": [],
+        "items": {
+            "type": "object",
+            "properties" : {
+                "name": {
+                    "type": "string",
+                    "default": ""
+                },
+                "type": {
+                    "type": "string",
+                    "default": "nfs"
+                },
+                "server": {
+                    "type": "string",
+                    "default": ""
+                },
+                "path": {
+                    "type": "string",
+                    "default": ""
+                },
+                "readonly": {
+                    "type": "boolean",
+                    "default": false
+                }
+            }
+        }
+    },
     "resources": {
       "title": "Resources (CPU/RAM)",
       "type": "object",
@@ -699,18 +749,11 @@
         }
       }
     },
-    "nodeSelector": {
-      "title": "Node selector",
-      "type": "object",
-      "default": {},
-      "additionalProperties": {
-        "type": "string"
-      },
-      "x-onyxia": {
-        "hidden": false,
-        "overwriteDefaultWith": "region.nodeSelector",
-        "overwriteSchemaWith": "nodeSelector.json"
-      }
+    "nodeHost": {
+        "title": "Node hostname",
+        "description": "Set the hostname on which you want to run",
+        "type": "string",
+        "default": ""
     },
     "ingress": {
       "title": "Ingress Details",
