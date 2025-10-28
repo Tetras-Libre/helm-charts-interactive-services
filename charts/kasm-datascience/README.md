@@ -1,6 +1,6 @@
 # kasm-data-science
 
-![Version: 0.0.10](https://img.shields.io/badge/Version-0.0.10-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
+![Version: 0.0.11](https://img.shields.io/badge/Version-0.0.11-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
 
 Webtop VNC for data science
 
@@ -121,7 +121,7 @@ Webtop VNC for data science
 | security.networkPolicy.from | list | `[]` |  |
 | security.password | string | `"changeme"` |  |
 | securityContext.capabilities.drop[0] | string | `"ALL"` |  |
-| securityContext.readOnlyRootFilesystem | bool | `true` |  |
+| securityContext.readOnlyRootFilesystem | bool | `false` |  |
 | securityContext.runAsNonRoot | bool | `false` |  |
 | securityContext.runAsUser | int | `0` |  |
 | service.image.custom.enabled | bool | `false` |  |
