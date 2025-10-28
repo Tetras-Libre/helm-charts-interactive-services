@@ -1,6 +1,6 @@
 # kasm-data-science
 
-![Version: 0.0.12](https://img.shields.io/badge/Version-0.0.12-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
+![Version: 0.0.13](https://img.shields.io/badge/Version-0.0.13-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
 
 Webtop VNC for data science
 
@@ -76,8 +76,7 @@ Webtop VNC for data science
 | mlflow.secretName | string | `""` |  |
 | nameOverride | string | `""` |  |
 | networking.clusterIP | string | `"None"` |  |
-| networking.service.port | int | `8888` |  |
-| networking.sparkui.port | int | `4040` |  |
+| networking.service.port | int | `3001` |  |
 | networking.type | string | `"ClusterIP"` |  |
 | networking.user.enabled | bool | `false` |  |
 | networking.user.port | int | `3001` |  |
@@ -120,6 +119,7 @@ Webtop VNC for data science
 | security.networkPolicy.enabled | bool | `false` |  |
 | security.networkPolicy.from | list | `[]` |  |
 | security.password | string | `"changeme"` |  |
+| securityContext.capabilities.add[0] | string | `"CHOWN"` |  |
 | securityContext.capabilities.drop[0] | string | `"ALL"` |  |
 | securityContext.readOnlyRootFilesystem | bool | `false` |  |
 | securityContext.runAsGroup | int | `0` |  |
