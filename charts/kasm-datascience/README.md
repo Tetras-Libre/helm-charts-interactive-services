@@ -66,7 +66,6 @@ Webtop VNC for data science
 | init.personalInit | string | `""` |  |
 | init.personalInitArgs | string | `""` |  |
 | init.regionInit | string | `""` |  |
-| init.standardInitPath | string | `"/opt/onyxia-init.sh"` |  |
 | kubernetes.enabled | bool | `false` |  |
 | kubernetes.role | string | `"view"` |  |
 | message.en | string | `""` |  |

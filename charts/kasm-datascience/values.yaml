@@ -23,7 +23,7 @@ security:
     ip: "0.0.0.0/0"
 
 init:
-  standardInitPath: "/opt/onyxia-init.sh"
+  standardInitPath: "/init"
   regionInit: ""
   personalInit: ""
   personalInitArgs: ""
