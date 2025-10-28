@@ -1,15 +1,15 @@
-# kasm-data-science
+# jupyter-pytorch-gpu
 
-![Version: 0.0.5](https://img.shields.io/badge/Version-0.0.5-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
+![Version: 2.3.40](https://img.shields.io/badge/Version-2.3.40-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
 
-Webtop VNC for data science
+The JupyterLab IDE with Python and the deep-learning framework PyTorch, with GPU support.
 
-**Homepage:** <https://docs.linuxserver.io/images/docker-webtop/>
+**Homepage:** <https://jupyter.org/>
 
 ## Source Code
 
 * <https://github.com/InseeFrLab/images-datascience>
-* <https://github.com/Tetras-Libre/helm-charts-interactive-services>
+* <https://github.com/InseeFrLab/helm-charts-interactive-services>
 
 ## Requirements
 
@@ -66,7 +66,7 @@ Webtop VNC for data science
 | init.personalInit | string | `""` |  |
 | init.personalInitArgs | string | `""` |  |
 | init.regionInit | string | `""` |  |
-| init.standardInitPath | string | `"/init"` |  |
+| init.standardInitPath | string | `"/opt/onyxia-init.sh"` |  |
 | kubernetes.enabled | bool | `false` |  |
 | kubernetes.role | string | `"view"` |  |
 | message.en | string | `""` |  |
@@ -80,7 +80,7 @@ Webtop VNC for data science
 | networking.sparkui.port | int | `4040` |  |
 | networking.type | string | `"ClusterIP"` |  |
 | networking.user.enabled | bool | `false` |  |
-| networking.user.port | int | `3001` |  |
+| networking.user.port | int | `5000` |  |
 | networking.user.ports | list | `[]` |  |
 | nodeSelector | object | `{}` |  |
 | openshiftSCC.enabled | bool | `false` |  |
@@ -122,10 +122,10 @@ Webtop VNC for data science
 | security.password | string | `"changeme"` |  |
 | securityContext | object | `{}` |  |
 | service.image.custom.enabled | bool | `false` |  |
-| service.image.custom.version | string | `"tetraslibre/kasm-data-science:latest"` |  |
+| service.image.custom.version | string | `"inseefrlab/onyxia-jupyter-pytorch:py3.13.7-gpu"` |  |
 | service.image.pullPolicy | string | `"IfNotPresent"` |  |
-| service.image.version | string | `"tetraslibre/kasm-data-science:latest"` |  |
-| service.initContainer.image | string | `"tetraslibre/kasm-data-science:latest"` |  |
+| service.image.version | string | `"inseefrlab/onyxia-jupyter-pytorch:py3.13.7-gpu"` |  |
+| service.initContainer.image | string | `"inseefrlab/onyxia-base:latest"` |  |
 | service.initContainer.pullPolicy | string | `"IfNotPresent"` |  |
 | serviceAccount.annotations | object | `{}` |  |
 | serviceAccount.create | bool | `true` |  |
