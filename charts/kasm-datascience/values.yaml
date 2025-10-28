@@ -36,7 +36,7 @@ init:
 extraEnvVars: []
 
 environment:
-  user: onyxia
+  CUSTOM_USER: onyxia
   group: users
 
 s3:
@@ -144,8 +144,8 @@ securityContext: {}
   #   drop:
   #   - ALL
   # readOnlyRootFilesystem: true
-  # runAsNonRoot: true
-  # runAsUser: 1000
+  runAsNonRoot: false
+  runAsUser: 0
 
 networking:
   type: ClusterIP
