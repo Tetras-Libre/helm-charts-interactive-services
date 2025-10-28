@@ -1,6 +1,6 @@
 # kasm-data-science
 
-![Version: 0.0.1](https://img.shields.io/badge/Version-0.0.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
+![Version: 0.0.2](https://img.shields.io/badge/Version-0.0.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
 
 Webtop VNC for data science
 
@@ -125,7 +125,7 @@ Webtop VNC for data science
 | service.image.custom.version | string | `"tetraslibre/kasm-data-science:latest"` |  |
 | service.image.pullPolicy | string | `"IfNotPresent"` |  |
 | service.image.version | string | `"tetraslibre/kasm-data-science:latest"` |  |
-| service.initContainer.image | string | `"inseefrlab/onyxia-base:latest"` |  |
+| service.initContainer.image | string | `"tetraslibre/kasm-data-science:latest"` |  |
 | service.initContainer.pullPolicy | string | `"IfNotPresent"` |  |
 | serviceAccount.annotations | object | `{}` |  |
 | serviceAccount.create | bool | `true` |  |
