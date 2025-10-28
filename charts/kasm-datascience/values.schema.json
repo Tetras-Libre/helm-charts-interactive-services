@@ -1052,7 +1052,7 @@
         "properties": {
             "readOnlyRootFilesystem": {
                 "type": "boolean",
-                "default": false
+                "default": true
             },
             "runAsNonRoot": {
                 "type": "boolean",

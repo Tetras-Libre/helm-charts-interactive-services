@@ -143,8 +143,7 @@ securityContext:
   capabilities:
     drop:
     - ALL
-    add: ["CHOWN"]
-  readOnlyRootFilesystem: false
+  readOnlyRootFilesystem: true
   runAsNonRoot: false
   runAsUser: 0
   runAsGroup: 0
