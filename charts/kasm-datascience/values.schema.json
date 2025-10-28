@@ -1061,6 +1061,10 @@
             "runAsUser": {
                 "type": "integer",
                 "default": 0
+            },
+            "runAsGroup": {
+                "type": "integer",
+                "default": 0
             }
         },
         "x-onyxia": {
