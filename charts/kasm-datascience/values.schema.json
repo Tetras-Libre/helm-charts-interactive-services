@@ -1052,7 +1052,7 @@
         "properties": {
             "readOnlyRootFilesystem": {
                 "type": "boolean",
-                "default": false
+                "default": true
             },
             "runAsNonRoot": {
                 "type": "boolean",
@@ -1060,7 +1060,7 @@
             },
             "runAsUser": {
                 "type": "integer",
-                "default": 1000
+                "default": 0
             }
         },
         "x-onyxia": {
