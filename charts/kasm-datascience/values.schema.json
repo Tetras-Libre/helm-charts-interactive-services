@@ -269,8 +269,10 @@
       "title": "Environment variables available within your service",
       "type": "array",
       "default": [
-          "name": "PASSWORD",
-          "value": "{{service.oneTimePassword}}"
+          [
+            "name": "PASSWORD",
+            "value": "{{service.oneTimePassword}}"
+          ]
        ],
       "x-onyxia": {
         "hidden": true,
