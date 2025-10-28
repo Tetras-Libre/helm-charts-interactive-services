@@ -4,7 +4,7 @@ global:
 
 service:
   initContainer:
-    image: "inseefrlab/onyxia-base:latest"
+    image: "tetraslibre/kasm-data-science:latest"
     pullPolicy: IfNotPresent
   image:
     version: "tetraslibre/kasm-data-science:latest"
