@@ -142,8 +142,6 @@ spec:
               awk 'BEGIN {c=0;} /BEGIN CERT/{c++} { print > "/dest/cacerts/cert." c ".crt"}' < /tmp/ca.pem;
               {{- end }}
           volumeMounts:
-            - name: kasm-local
-              mountPath: /config
             - name: config-files
               mountPath: /dest
             {{- if (.Values.certificates).cacerts }}
@@ -278,6 +276,8 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
+            - name: kasm-config
+              mountPath: /config
             - name: kasm-local
               mountPath: /home/{{ .Values.environment.user }}/.local/share/jupyter
             - mountPath: /home/{{ .Values.environment.user }}/work
