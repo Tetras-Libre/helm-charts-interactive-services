@@ -139,11 +139,11 @@ volumes: []
 
 additionalVolumeMounts: []
 
-securityContext: {}
-  # capabilities:
-  #   drop:
-  #   - ALL
-  # readOnlyRootFilesystem: true
+securityContext:
+  capabilities:
+    drop:
+    - ALL
+  readOnlyRootFilesystem: true
   runAsNonRoot: false
   runAsUser: 0
 
