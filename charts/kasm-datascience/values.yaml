@@ -1,4 +1,4 @@
-# Default values for jupyter.
+# Default values for kasm.
 global:
   suspend: false
 
