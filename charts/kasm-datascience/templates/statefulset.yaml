@@ -185,6 +185,8 @@ spec:
               {{- end }}
             - name: PROJECT_USER
               value: {{ .Values.environment.user }}
+            - name: ONYXIA
+              value: "true"
             - name: PROJECT_GROUP
               value: {{ .Values.environment.group }}
             - name: ROOT_PROJECT_DIRECTORY
