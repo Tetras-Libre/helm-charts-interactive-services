@@ -60,6 +60,9 @@ spec:
         {{- include "library-chart.selectorLabels" . | nindent 8 }}
     spec:
       volumes:
+        - name: kasm-local
+          emptyDir: {}
+        - name: home
         {{- if (.Values.persistence).enabled }}
           persistentVolumeClaim:
             claimName: {{ .Values.persistence.existingClaim | default (include "library-chart.fullname" .) }}
@@ -271,6 +274,8 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
+            - name: kasm-local
+              mountPath: /home/{{ .Values.environment.user }}/.local/share/jupyter
             - mountPath: /home/{{ .Values.environment.user }}/work
               subPath: work
               name: home
