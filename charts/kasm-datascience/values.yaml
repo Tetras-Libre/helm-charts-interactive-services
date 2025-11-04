@@ -143,7 +143,7 @@ securityContext:
   capabilities:
     drop:
     - ALL
-    add: ['CHOWN']
+    add: ['CHOWN', 'SETUID']
   readOnlyRootFilesystem: false
   runAsNonRoot: false
   runAsUser: 0
