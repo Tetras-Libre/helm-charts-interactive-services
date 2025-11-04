@@ -21424,6 +21424,29 @@ entries:
     version: 1.10.4
   kasm-data-science:
   - apiVersion: v2
+    created: "2025-11-04T13:49:06.544844004Z"
+    dependencies:
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-interactive-services
+      version: 1.7.13
+    description: Webtop VNC for data science
+    digest: 36f94bd7a265df1c0b3bd93bc6bced1fee97643ab1ab037afa548e3601338407
+    home: https://docs.linuxserver.io/images/docker-webtop/
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/webtop-logo.png
+    keywords:
+    - Kasm
+    - Python
+    - Java
+    - VNC
+    name: kasm-data-science
+    sources:
+    - https://github.com/InseeFrLab/images-datascience
+    - https://github.com/Tetras-Libre/helm-charts-interactive-services
+    type: application
+    urls:
+    - https://github.com/Tetras-Libre/helm-charts-interactive-services/releases/download/kasm-data-science-0.0.19/kasm-data-science-0.0.19.tgz
+    version: 0.0.19
+  - apiVersion: v2
     created: "2025-11-04T13:24:29.781961148Z"
     dependencies:
     - name: library-chart
@@ -49816,4 +49839,4 @@ entries:
     urls:
     - https://github.com/Tetras-Libre/helm-charts-interactive-services/releases/download/vscode-tensorflow-gpu-1.8.6/vscode-tensorflow-gpu-1.8.6.tgz
     version: 1.8.6
-generated: "2025-11-04T13:24:29.784811678Z"
+generated: "2025-11-04T13:49:06.547417834Z"
