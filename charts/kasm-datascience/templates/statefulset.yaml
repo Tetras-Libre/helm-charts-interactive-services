@@ -60,9 +60,9 @@ spec:
         {{- include "library-chart.selectorLabels" . | nindent 8 }}
     spec:
       volumes:
-        - name: kasm-local
+        - name: webtop-local
           emptyDir: {}
-        - name: kasm-config
+        - name: webtop-config
           emptyDir: {}
         - name: home
         {{- if (.Values.persistence).enabled }}
@@ -114,7 +114,7 @@ spec:
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       subdomain: {{ include "library-chart.fullname" . }}
-      hostname: kasm
+      hostname: webtop
       initContainers:
         - name: make-secrets-writable
           image: {{ .Values.service.initContainer.image }}
@@ -276,9 +276,9 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
-            - name: kasm-config
+            - name: webtop-config
               mountPath: /config
-            - name: kasm-local
+            - name: webtop-local
               mountPath: /home/{{ .Values.environment.user }}/.local/share/jupyter
             - mountPath: /home/{{ .Values.environment.user }}/work
               subPath: work
