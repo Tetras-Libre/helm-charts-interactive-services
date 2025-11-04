@@ -1,6 +1,6 @@
 # kasm-data-science
 
-![Version: 0.0.20](https://img.shields.io/badge/Version-0.0.20-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
+![Version: 0.0.21](https://img.shields.io/badge/Version-0.0.21-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
 
 Webtop VNC for data science
 
@@ -123,6 +123,7 @@ Webtop VNC for data science
 | securityContext.capabilities.add[1] | string | `"SETUID"` |  |
 | securityContext.capabilities.add[2] | string | `"SETGID"` |  |
 | securityContext.capabilities.add[3] | string | `"CAP_DAC_OVERRIDE"` |  |
+| securityContext.capabilities.add[4] | string | `"CAP_DAC_READ_SEARCH"` |  |
 | securityContext.capabilities.drop[0] | string | `"ALL"` |  |
 | securityContext.readOnlyRootFilesystem | bool | `false` |  |
 | securityContext.runAsGroup | int | `0` |  |
