@@ -1,6 +1,6 @@
 # webtop-data-science
 
-![Version: 0.0.22](https://img.shields.io/badge/Version-0.0.22-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
+![Version: 0.0.23](https://img.shields.io/badge/Version-0.0.23-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
 
 Webtop VNC for data science
 
@@ -51,7 +51,8 @@ Webtop VNC for data science
 | global.suspend | bool | `false` |  |
 | hive.secretName | string | `""` |  |
 | imagePullSecrets | list | `[]` |  |
-| ingress.annotations | list | `[]` |  |
+| ingress.annotations."nginx.ingress.kubernetes.io/auth-tls-verify-client" | string | `"off"` |  |
+| ingress.annotations."nginx.ingress.kubernetes.io/backend-protocol" | string | `"HTTPS"` |  |
 | ingress.certManagerClusterIssuer | string | `""` |  |
 | ingress.enabled | bool | `false` |  |
 | ingress.hostname | string | `"chart-example.local"` |  |
