@@ -49887,6 +49887,29 @@ entries:
     version: 1.8.6
   webtop-data-science:
   - apiVersion: v2
+    created: "2025-11-05T13:19:57.614997672Z"
+    dependencies:
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-interactive-services
+      version: 1.7.13
+    description: Webtop VNC for data science
+    digest: e25229fd086b882e9656cfd093f33815089f0650c6c3f6d30f02be78370f1391
+    home: https://docs.linuxserver.io/images/docker-webtop/
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/webtop-logo.png
+    keywords:
+    - Webtop
+    - Python
+    - Java
+    - VNC
+    name: webtop-data-science
+    sources:
+    - https://github.com/InseeFrLab/images-datascience
+    - https://github.com/Tetras-Libre/helm-charts-interactive-services
+    type: application
+    urls:
+    - https://github.com/Tetras-Libre/helm-charts-interactive-services/releases/download/webtop-data-science-0.0.24/webtop-data-science-0.0.24.tgz
+    version: 0.0.24
+  - apiVersion: v2
     created: "2025-11-05T13:04:56.407982762Z"
     dependencies:
     - name: library-chart
@@ -49932,4 +49955,4 @@ entries:
     urls:
     - https://github.com/Tetras-Libre/helm-charts-interactive-services/releases/download/webtop-data-science-0.0.22/webtop-data-science-0.0.22.tgz
     version: 0.0.22
-generated: "2025-11-05T13:04:56.411104831Z"
+generated: "2025-11-05T13:19:57.617668402Z"
