@@ -1,15 +1,15 @@
-# webtop-data-science
+# jupyter-tensorflow
 
-![Version: 0.0.28](https://img.shields.io/badge/Version-0.0.28-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
+![Version: 2.3.40](https://img.shields.io/badge/Version-2.3.40-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
 
-Webtop VNC for data science
+The JupyterLab IDE with Python and the deep-learning framework TensorFlow.
 
-**Homepage:** <https://docs.linuxserver.io/images/docker-webtop/>
+**Homepage:** <https://jupyter.org/>
 
 ## Source Code
 
 * <https://github.com/InseeFrLab/images-datascience>
-* <https://github.com/Tetras-Libre/helm-charts-interactive-services>
+* <https://github.com/InseeFrLab/helm-charts-interactive-services>
 
 ## Requirements
 
@@ -36,8 +36,8 @@ Webtop VNC for data science
 | discovery.milvus | bool | `true` |  |
 | discovery.mlflow | bool | `true` |  |
 | discovery.postgresql | bool | `true` |  |
-| environment.CUSTOM_USER | string | `"onyxia"` |  |
 | environment.group | string | `"users"` |  |
+| environment.user | string | `"onyxia"` |  |
 | extraEnvVars | list | `[]` |  |
 | fullnameOverride | string | `""` |  |
 | git.branch | string | `""` |  |
@@ -51,8 +51,7 @@ Webtop VNC for data science
 | global.suspend | bool | `false` |  |
 | hive.secretName | string | `""` |  |
 | imagePullSecrets | list | `[]` |  |
-| ingress.annotations."traefik.ingress.kubernetes.io/router.tls.certresolver" | string | `"myresolver"` |  |
-| ingress.annotations."traefik.ingress.kubernetes.io/service.serversscheme" | string | `"https"` |  |
+| ingress.annotations | list | `[]` |  |
 | ingress.certManagerClusterIssuer | string | `""` |  |
 | ingress.enabled | bool | `false` |  |
 | ingress.hostname | string | `"chart-example.local"` |  |
@@ -67,7 +66,7 @@ Webtop VNC for data science
 | init.personalInit | string | `""` |  |
 | init.personalInitArgs | string | `""` |  |
 | init.regionInit | string | `""` |  |
-| init.standardInitPath | string | `"/init"` |  |
+| init.standardInitPath | string | `"/opt/onyxia-init.sh"` |  |
 | kubernetes.enabled | bool | `false` |  |
 | kubernetes.role | string | `"view"` |  |
 | message.en | string | `""` |  |
@@ -77,10 +76,11 @@ Webtop VNC for data science
 | mlflow.secretName | string | `""` |  |
 | nameOverride | string | `""` |  |
 | networking.clusterIP | string | `"None"` |  |
-| networking.service.port | int | `3001` |  |
+| networking.service.port | int | `8888` |  |
+| networking.sparkui.port | int | `4040` |  |
 | networking.type | string | `"ClusterIP"` |  |
 | networking.user.enabled | bool | `false` |  |
-| networking.user.port | int | `3001` |  |
+| networking.user.port | int | `5000` |  |
 | networking.user.ports | list | `[]` |  |
 | nodeSelector | object | `{}` |  |
 | openshiftSCC.enabled | bool | `false` |  |
@@ -120,19 +120,12 @@ Webtop VNC for data science
 | security.networkPolicy.enabled | bool | `false` |  |
 | security.networkPolicy.from | list | `[]` |  |
 | security.password | string | `"changeme"` |  |
-| securityContext.capabilities.add[0] | string | `"CHOWN"` |  |
-| securityContext.capabilities.add[1] | string | `"SETUID"` |  |
-| securityContext.capabilities.add[2] | string | `"SETGID"` |  |
-| securityContext.capabilities.drop[0] | string | `"ALL"` |  |
-| securityContext.readOnlyRootFilesystem | bool | `false` |  |
-| securityContext.runAsGroup | int | `0` |  |
-| securityContext.runAsNonRoot | bool | `false` |  |
-| securityContext.runAsUser | int | `0` |  |
+| securityContext | object | `{}` |  |
 | service.image.custom.enabled | bool | `false` |  |
-| service.image.custom.version | string | `"tetraslibre/kasm-data-science:latest"` |  |
+| service.image.custom.version | string | `"inseefrlab/onyxia-jupyter-tensorflow:py3.12.11"` |  |
 | service.image.pullPolicy | string | `"IfNotPresent"` |  |
-| service.image.version | string | `"tetraslibre/kasm-data-science:latest"` |  |
-| service.initContainer.image | string | `"tetraslibre/kasm-data-science:latest"` |  |
+| service.image.version | string | `"inseefrlab/onyxia-jupyter-tensorflow:py3.12.11"` |  |
+| service.initContainer.image | string | `"inseefrlab/onyxia-base:latest"` |  |
 | service.initContainer.pullPolicy | string | `"IfNotPresent"` |  |
 | serviceAccount.annotations | object | `{}` |  |
 | serviceAccount.create | bool | `true` |  |
