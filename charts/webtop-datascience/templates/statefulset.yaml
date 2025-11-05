@@ -259,6 +259,7 @@ spec:
           livenessProbe:
             httpGet:
               path: /
+              scheme: HTTPS
               port: {{ .Values.networking.service.port }}
             timeoutSeconds: 2
             failureThreshold: 6
@@ -266,11 +267,13 @@ spec:
             httpGet:
               path: /
               port: {{ .Values.networking.service.port }}
+              scheme: HTTPS
           {{- if hasKey .Values "startupProbe" }}
           startupProbe:
             httpGet:
               path: /
               port: {{ .Values.networking.service.port }}
+              scheme: HTTPS
             {{- toYaml .Values.startupProbe | nindent 12 }}
           {{- end }}
           resources:
