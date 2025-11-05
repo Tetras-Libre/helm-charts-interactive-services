@@ -168,7 +168,7 @@ ingress:
   tls: true
   ingressClassName: ""
   annotations:
-    traefik.ingress.kubernetes.io/router.tls: "true"
+    traefik.ingress.kubernetes.io/service.serversscheme: "https"
     traefik.ingress.kubernetes.io/router.tls.certresolver: "myresolver"
   hostname: chart-example.local
   userHostname: chart-example-user.local
