@@ -154,6 +154,7 @@ networking:
   clusterIP: None
   service:
     port: 3001
+    scheme: https
   # Custom user-specified extra ports exposition.
   # If ingress or route is enabled, the exposed ports are also made available at the
   # {ingress,route}.userHostname URL (or variations, in case several ports are provided).
