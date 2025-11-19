@@ -11,7 +11,7 @@ service:
     pullPolicy: IfNotPresent
     custom:
       enabled: false
-      version: "inseefrlab/onyxia-jupyter-python:py3.13.7"
+      version: "tetraslibre/jupyter-conda:sisenvs"
 
 security:
   password: "changeme"
