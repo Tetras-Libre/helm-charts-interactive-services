@@ -1,6 +1,6 @@
 # webtop-data-science
 
-![Version: 0.0.29](https://img.shields.io/badge/Version-0.0.29-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
+![Version: 0.0.30](https://img.shields.io/badge/Version-0.0.30-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
 
 Webtop VNC for data science
 
@@ -52,7 +52,6 @@ Webtop VNC for data science
 | hive.secretName | string | `""` |  |
 | imagePullSecrets | list | `[]` |  |
 | ingress.annotations."traefik.ingress.kubernetes.io/router.tls.certresolver" | string | `"myresolver"` |  |
-| ingress.annotations."traefik.ingress.kubernetes.io/service.serversscheme" | string | `"https"` |  |
 | ingress.certManagerClusterIssuer | string | `""` |  |
 | ingress.enabled | bool | `false` |  |
 | ingress.hostname | string | `"chart-example.local"` |  |
@@ -77,11 +76,10 @@ Webtop VNC for data science
 | mlflow.secretName | string | `""` |  |
 | nameOverride | string | `""` |  |
 | networking.clusterIP | string | `"None"` |  |
-| networking.service.port | int | `3001` |  |
-| networking.service.scheme | string | `"https"` |  |
+| networking.service.port | int | `3000` |  |
 | networking.type | string | `"ClusterIP"` |  |
 | networking.user.enabled | bool | `false` |  |
-| networking.user.port | int | `3001` |  |
+| networking.user.port | int | `3000` |  |
 | networking.user.ports | list | `[]` |  |
 | nodeSelector | object | `{}` |  |
 | openshiftSCC.enabled | bool | `false` |  |
