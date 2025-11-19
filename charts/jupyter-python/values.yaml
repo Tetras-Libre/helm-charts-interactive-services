@@ -7,7 +7,7 @@ service:
     image: "inseefrlab/onyxia-base:latest"
     pullPolicy: IfNotPresent
   image:
-    version: "inseefrlab/onyxia-jupyter-python:py3.13.7"
+    version: "tetraslibre/jupyter-conda:sisenvs"
     pullPolicy: IfNotPresent
     custom:
       enabled: false

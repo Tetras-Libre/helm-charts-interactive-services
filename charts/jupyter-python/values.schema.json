@@ -24,6 +24,7 @@
               "title": "Name of the service's Docker image",
               "type": "string",
               "listEnum": [
+                "tetraslibre/jupyter-conda:sisenvs",
                 "inseefrlab/onyxia-jupyter-python:py3.13.7",
                 "inseefrlab/onyxia-jupyter-python:py3.12.11"
               ],
@@ -32,7 +33,7 @@
                 "value": true,
                 "path": "service/image/custom/enabled"
               },
-              "default": "inseefrlab/onyxia-jupyter-python:py3.13.7"
+              "default": "tetraslibre/jupyter-conda:sisenvs"
             },
             "custom": {
               "title": "Custom image",
@@ -49,7 +50,7 @@
                 "version": {
                   "title": "Name of the custom image",
                   "type": "string",
-                  "default": "inseefrlab/onyxia-jupyter-python:py3.13.7",
+                  "default": "tetraslibre/jupyter-conda:sisenvs",
                   "hidden": {
                     "value": false,
                     "path": "enabled",
