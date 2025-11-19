@@ -60,8 +60,6 @@ spec:
         {{- include "library-chart.selectorLabels" . | nindent 8 }}
     spec:
       volumes:
-        - name: jupyter-local
-          emptyDir: {}
         - name: home
         {{- if (.Values.persistence).enabled }}
           persistentVolumeClaim:
@@ -295,8 +293,6 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
-            - name: jupyter-local
-              mountPath: /home/{{ .Values.environment.user }}/.local/share/jupyter
             {{ if (.Values.userPreferences.aiAssistant).enabled }}
             - mountPath: /home/{{ .Values.environment.user }}/.local/share/jupyter/jupyter_ai
               subPath: jupyter-ai
