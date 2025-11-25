@@ -23,9 +23,8 @@
             "version": {
               "title": "Name of the service's Docker image",
               "type": "string",
-              "default": "onyxia-vscode-pytorch:sisenvs",
+              "default": "inseefrlab/onyxia-vscode-pytorch:py3.13.7",
               "listEnum": [
-                "onyxia-vscode-pytorch:sisenvs",
                 "inseefrlab/onyxia-vscode-pytorch:py3.13.7",
                 "inseefrlab/onyxia-vscode-pytorch:py3.12.11"
               ],
@@ -50,7 +49,7 @@
                 "version": {
                   "title": "Name of the custom image",
                   "type": "string",
-                  "default": "onyxia-vscode-pytorch:sisenvs",
+                  "default": "inseefrlab/onyxia-vscode-pytorch:py3.13.7",
                   "hidden": {
                     "value": false,
                     "path": "enabled",

@@ -23,9 +23,8 @@
             "version": {
               "title": "Name of the service's Docker image",
               "type": "string",
-              "default": "onyxia-vscode-pytorch:sisenvs-gpu",
+              "default": "inseefrlab/onyxia-vscode-pytorch:py3.13.7-gpu",
               "listEnum": [
-                "onyxia-vscode-pytorch:sisenvs-gpu",
                 "inseefrlab/onyxia-vscode-pytorch:py3.13.7-gpu",
                 "inseefrlab/onyxia-vscode-pytorch:py3.12.11-gpu"
               ],
@@ -50,7 +49,7 @@
                 "version": {
                   "title": "Name of the custom image",
                   "type": "string",
-                  "default": "onyxia-vscode-pytorch:sisenvs-gpu",
+                  "default": "inseefrlab/onyxia-vscode-pytorch:py3.13.7-gpu",
                   "hidden": {
                     "value": false,
                     "path": "enabled",
