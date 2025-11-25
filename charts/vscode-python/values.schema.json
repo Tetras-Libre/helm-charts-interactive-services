@@ -23,9 +23,9 @@
             "version": {
               "title": "Name of the service's Docker image",
               "type": "string",
-              "default": "onyxia-vscode-python:sisenvs",
+              "default": "tetraslibre/vscode-conda:sisenvs",
               "listEnum": [
-                 "onyxia-vscode-python:sisenvs",
+                 "tetraslibre/vscode-conda:sisenvs",
                 "inseefrlab/onyxia-vscode-python:py3.13.7",
                 "inseefrlab/onyxia-vscode-python:py3.12.11"
               ],
@@ -50,7 +50,7 @@
                 "version": {
                   "title": "Name of the custom image",
                   "type": "string",
-                  "default": "onyxia-vscode-python:sisenvs",
+                  "default": "tetraslibre/vscode-conda:sisenvs",
                   "hidden": {
                     "value": false,
                     "path": "enabled",
