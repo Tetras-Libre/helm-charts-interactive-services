@@ -23,8 +23,9 @@
             "version": {
               "title": "Name of the service's Docker image",
               "type": "string",
-              "default": "inseefrlab/onyxia-vscode-python:py3.13.7",
+              "default": "onyxia-vscode-python:sisenvs",
               "listEnum": [
+                 "onyxia-vscode-python:sisenvs",
                 "inseefrlab/onyxia-vscode-python:py3.13.7",
                 "inseefrlab/onyxia-vscode-python:py3.12.11"
               ],
@@ -49,7 +50,7 @@
                 "version": {
                   "title": "Name of the custom image",
                   "type": "string",
-                  "default": "inseefrlab/onyxia-vscode-python:py3.13.7",
+                  "default": "onyxia-vscode-python:sisenvs",
                   "hidden": {
                     "value": false,
                     "path": "enabled",
