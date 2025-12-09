@@ -8,7 +8,7 @@ service:
     pullPolicy: IfNotPresent
   image:
     version: "tetraslibre/vscode-conda:sisenvs"
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
     custom:
       enabled: false
       version: "tetraslibre/vscode-conda:sisenvs"

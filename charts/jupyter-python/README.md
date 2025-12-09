@@ -123,7 +123,7 @@ The JupyterLab IDE with Python and a collection of standard data science package
 | securityContext | object | `{}` |  |
 | service.image.custom.enabled | bool | `false` |  |
 | service.image.custom.version | string | `"tetraslibre/jupyter-conda:sisenvs"` |  |
-| service.image.pullPolicy | string | `"IfNotPresent"` |  |
+| service.image.pullPolicy | string | `"Always"` |  |
 | service.image.version | string | `"tetraslibre/jupyter-conda:sisenvs"` |  |
 | service.initContainer.image | string | `"inseefrlab/onyxia-base:latest"` |  |
 | service.initContainer.pullPolicy | string | `"IfNotPresent"` |  |

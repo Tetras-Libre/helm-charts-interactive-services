@@ -8,7 +8,7 @@ service:
     pullPolicy: IfNotPresent
   image:
     version: "tetraslibre/kasm-data-science:latest"
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
     custom:
       enabled: false
       version: "tetraslibre/kasm-data-science:latest"

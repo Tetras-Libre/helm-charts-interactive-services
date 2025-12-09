@@ -8,7 +8,7 @@ service:
     pullPolicy: IfNotPresent
   image:
     version: "tetraslibre/jupyter-conda:sisenvs"
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
     custom:
       enabled: false
       version: "tetraslibre/jupyter-conda:sisenvs"

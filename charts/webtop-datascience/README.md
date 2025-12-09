@@ -129,7 +129,7 @@ Webtop VNC for data science
 | securityContext.runAsUser | int | `0` |  |
 | service.image.custom.enabled | bool | `false` |  |
 | service.image.custom.version | string | `"tetraslibre/kasm-data-science:latest"` |  |
-| service.image.pullPolicy | string | `"IfNotPresent"` |  |
+| service.image.pullPolicy | string | `"Always"` |  |
 | service.image.version | string | `"tetraslibre/kasm-data-science:latest"` |  |
 | service.initContainer.image | string | `"tetraslibre/kasm-data-science:latest"` |  |
 | service.initContainer.pullPolicy | string | `"IfNotPresent"` |  |
