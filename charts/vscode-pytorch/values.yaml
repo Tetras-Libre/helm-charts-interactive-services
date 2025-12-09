@@ -6,7 +6,7 @@ service:
     pullPolicy: IfNotPresent
   image:
     version: inseefrlab/onyxia-vscode-pytorch:py3.13.7
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
     custom:
       enabled: false
       version: inseefrlab/onyxia-vscode-pytorch:py3.13.7

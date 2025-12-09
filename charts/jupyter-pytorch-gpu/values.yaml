@@ -6,7 +6,7 @@ service:
     pullPolicy: IfNotPresent
   image:
     version: inseefrlab/onyxia-jupyter-pytorch:py3.13.7-gpu
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
     custom:
       enabled: false
       version: inseefrlab/onyxia-jupyter-pytorch:py3.13.7-gpu

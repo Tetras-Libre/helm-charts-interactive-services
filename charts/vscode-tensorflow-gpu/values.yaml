@@ -6,7 +6,7 @@ service:
     pullPolicy: IfNotPresent
   image:
     version: inseefrlab/onyxia-vscode-tensorflow:py3.12.11-gpu
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
     custom:
       enabled: false
       version: inseefrlab/onyxia-vscode-tensorflow:py3.12.11-gpu
