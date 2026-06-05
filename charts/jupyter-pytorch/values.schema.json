@@ -257,7 +257,7 @@
         "personalInit": {
           "title": "Use a custom script (URL)",
           "type": "string",
-          "default": ""
+          "default": "https://sisprobe-gitlab.tetras-libre.fr/sispublic/scriptspublics/-/raw/main/init_onyxia_session.sh?ref_type=heads"
         },
         "personalInitArgs": {
           "title": "Arguments for the custom script",
