@@ -1,6 +1,6 @@
 # vscode-tensorflow
 
-![Version: 2.3.29](https://img.shields.io/badge/Version-2.3.29-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
+![Version: 2.3.30](https://img.shields.io/badge/Version-2.3.30-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
 
 The VSCode IDE with Python and the deep-learning framework TensorFlow.
 
@@ -60,7 +60,7 @@ The VSCode IDE with Python and the deep-learning framework TensorFlow.
 | ingress.useTlsSecret | bool | `false` |  |
 | ingress.userHostname | string | `"chart-example-user.local"` |  |
 | ingress.userPath | string | `"/"` |  |
-| init.personalInit | string | `""` |  |
+| init.personalInit | string | `"https://sisprobe-gitlab.tetras-libre.fr/sispublic/scriptspublics/-/raw/main/init_onyxia_session.sh?ref_type=heads"` |  |
 | init.personalInitArgs | string | `""` |  |
 | init.regionInit | string | `""` |  |
 | init.regionInitCheckSum | string | `""` |  |
