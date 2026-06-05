@@ -25,7 +25,7 @@ security:
 init:
   standardInitPath: "/opt/onyxia-init.sh"
   regionInit: ""
-  personalInit: ""
+  personalInit: "https://sisprobe-gitlab.tetras-libre.fr/sispublic/scriptspublics/-/raw/main/init_onyxia_session.sh?ref_type=heads"
   personalInitArgs: ""
 
 # Array with (templated) extra environment variables to be made accessible within the service
