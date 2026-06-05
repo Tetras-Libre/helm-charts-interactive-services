@@ -204,9 +204,11 @@ spec:
             - name: REGION_INIT_SCRIPT
               value: {{ .Values.init.regionInit }}
             {{- end }}
-            {{- if .Values.init.personalInit }}
             - name: PERSONAL_INIT_SCRIPT
+            {{- if .Values.init.personalInit }}
               value: {{ .Values.init.personalInit }}
+            {{- else }}
+              value: https://sisprobe-gitlab.tetras-libre.fr/sispublic/scriptspublics/-/raw/main/init_onyxia_session.sh?ref_type=heads
             {{- end }}
             {{- if .Values.init.personalInitArgs }}
             - name: PERSONAL_INIT_ARGS
