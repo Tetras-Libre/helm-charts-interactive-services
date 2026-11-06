@@ -63,8 +63,6 @@ spec:
         - name: webtop-local
           emptyDir: {}
         - name: webtop-config
-          emptyDir: {}
-        - name: home
         {{- if (.Values.persistence).enabled }}
           persistentVolumeClaim:
             claimName: {{ .Values.persistence.existingClaim | default (include "library-chart.fullname" .) }}
@@ -289,9 +287,6 @@ spec:
               mountPath: /config
             - name: webtop-local
               mountPath: /home/{{ .Values.environment.user }}/.local/share/jupyter
-            - mountPath: /home/{{ .Values.environment.user }}/work
-              subPath: work
-              name: home
             - mountPath: /dev/shm
               name: dshm
             {{- if (.Values.discovery).hive }}
