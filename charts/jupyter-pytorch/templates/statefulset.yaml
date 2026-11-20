@@ -105,7 +105,7 @@ spec:
             server: {{ tpl (.server) $ }}
             path: {{ tpl (.path) $ }}
             readonly: {{ .readonly }}
-          {{ -else }}
+          {{- else }}
           {{- if eq .type "pvc" }}
           persistentVolumeClaim: 
             claimName: {{ tpl (.claimName) $ }}
